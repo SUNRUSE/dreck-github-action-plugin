@@ -1,0 +1,15 @@
+name: Continuous Integration
+on: [push, pull_request]
+jobs:
+  main:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        submodules: true
+    - run: make --file ./submodules/dreck/makefile
+      shell: bash
+    - if: github.event_name == 'release' && github.event.action == 'created'
+      uses: softprops/action-gh-release@v1
+      with:
+        files: dist/**
