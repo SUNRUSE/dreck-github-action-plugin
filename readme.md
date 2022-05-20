@@ -17,4 +17,4 @@ Other plugins you install will most likely have their own dependencies (e.g. Nod
 
 The default behavior of this plugin is to discard build outputs for normal commits on branches or in raised PRs - the build is performed merely to ensure that it _can_ be completed successfully.
 
-It will, however, also run when a GitHub release is created.  Following a successful build, all files in the `./dist` directory and its subdirectories are added to the release.
+It will, however, also run when a GitHub release is created.  Following a successful build, all files in the `./ephemeral/dist` directory and its subdirectories are added to the release.

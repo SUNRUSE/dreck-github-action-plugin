@@ -12,4 +12,4 @@ jobs:
     - if: github.event_name == 'release' && github.event.action == 'created'
       uses: softprops/action-gh-release@v1
       with:
-        files: dist/**
+        files: ephemeral/dist/**
