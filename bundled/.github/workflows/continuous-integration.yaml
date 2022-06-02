@@ -7,9 +7,9 @@ jobs:
     - uses: actions/checkout@v3
       with:
         submodules: true
-    - run: make --file ./submodules/dreck/makefile
+    - run: make --file ./dreck/makefile
       shell: bash
     - if: github.event_name == 'release' && github.event.action == 'created'
       uses: softprops/action-gh-release@v1
       with:
-        files: ephemeral/dist/**
+        files: SPECIFY FILE PATHS HERE
